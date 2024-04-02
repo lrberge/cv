@@ -48,6 +48,40 @@ Install the fontawesome fonts:
 
 #show par: set block(above: 1em)
 
+#let content_to_text(x) = {
+  
+  if x.has("text") {
+    return x.text
+  } else if x.has("children") {
+    let res = ""
+    
+    for xi in x.children {
+      res += content_to_text(xi)
+    }
+    
+    return res
+  } else if x.func() == [ ].func() {
+    return " "
+  } else {
+    return x
+  }
+}
+
+// #let a = [bon: jour les gens]
+
+// #{
+//   repr(a)
+//   parbreak()
+//   let b = a.children
+  
+//   repr(b)
+//   repr(b.at(1).func())
+  
+//   repr(b.at(2).func() == [ ].func())
+// }
+
+// #repr(content_to_text(a))
+
 // Headers
 #set heading(numbering: "1")
 #show heading: x => {
@@ -57,13 +91,10 @@ Install the fontawesome fonts:
     let y_remaining = height_total - here().position().y
     
     let nb_raw = counter(heading).get()
-    let nb_fmt = text(20pt)[#numbering(x.numbering, ..nb_raw)]
+    let nb_fmt = text(18pt)[#numbering(x.numbering, ..nb_raw)]
     let size = measure(nb_fmt)
     let nb_height = size.height
     let height_heading = nb_height + 1cm
-    
-    // place[\ height_total = #height_total ; height_heading = #height_heading ; 
-    //           y_remaining = #y_remaining \ ]
     
     let add_pb = y_remaining < 2 * height_heading
     if y_remaining < 2 * height_heading {
@@ -72,12 +103,25 @@ Install the fontawesome fonts:
     
     let header_fmt = [#x.body]
     block(stroke: (bottom: 0pt), width: 100%, inset: (bottom: 3pt))[
-      #set text(14pt)      
+      #set text(13pt)      
       #place(dx: -size.width - 0.15cm, dy: 0cm)[#nb_fmt]
       #underline(evade: true, offset: 5pt, stroke: (paint: black, thickness: 1.1pt))[
         #header_fmt#text(fill:white)[#box(width: 1fr)[#repeat[.]]]
       ]
     ]
+    
+    
+    // let heading-text = content_to_text(x.body)
+    // let inital = heading-text.at(0)
+    // let rest_text = heading-text.slice(1, heading-text.len())
+    
+    // block(stroke: (bottom: 0pt), width: 100%, inset: (bottom: 3pt))[
+    //   #set text(14pt)      
+    //   #place(dx: - 1em, dy: 0cm)[#text(20pt)[#inital]]
+    //   #underline(evade: true, offset: 5pt, stroke: (paint: black, thickness: 1.1pt))[
+    //     #rest_text#text(fill:white)[#box(width: 1fr)[#repeat[.]]]
+    //   ]
+    // ]
     
   }
   
@@ -180,7 +224,6 @@ Install the fontawesome fonts:
   )
 }
 
-// #show: header_fixer
 
 = Current Position
 
@@ -353,7 +396,6 @@ Install the fontawesome fonts:
 = Publications in French
 
 #publi(title: "Le déploiement du très haut débit a-t-il favorisé la numérisation des entreprises? Une évaluation du Plan France Très Haut Débit.",
-       link: "https://www.strategie.gouv.fr/sites/strategie.gouv.fr/files/atoms/files/etude_inrae_retombees_du_plan_france_tres_haut_debit_sur_les_entreprises.pdf",
        authors: ("Chloé Duvivier", "Florian Léon"),
        venue: "La Revue Économique",
        year: [_forthcoming_])
@@ -419,7 +461,7 @@ Install the fontawesome fonts:
 = Grants
 
 #date_table[
-  2020:	France Stratégie, "_Retombées du déploiement du très haut débit sur les entreprises: Quels effets sur les usages numériques, l'innovation, et la performance ?_" (Evaluating the economic impact of ultra-fast broadband deployment in France) \ 
+  2020:	France Stratégie, "#link("https://www.strategie.gouv.fr/sites/strategie.gouv.fr/files/atoms/files/etude_inrae_retombees_du_plan_france_tres_haut_debit_sur_les_entreprises.pdf",)[_Retombées du déploiement du très haut débit sur les entreprises: Quels effets sur les usages numériques, l'innovation, et la performance ?_]" (Evaluating the economic impact of ultra-fast broadband deployment in France) \ 
   w/ Claire Buissière, Chloé Duvivier (PI) and Florian Léon `[91,000€]`
 ]
 
