@@ -33,7 +33,7 @@ Install the fontawesome fonts:
       if here().page() > 1 {
         set align(center + horizon)
         set text(10pt)
-        box(width: 100%, stroke: (bottom: stroke(1pt)), inset: (bottom: 5pt))[
+        box(width: 100%, stroke: (bottom: stroke(0.5pt)), inset: (bottom: 5pt))[
           #smallcaps[
             CV -- #the_month #h(1fr) Laurent R. Bergé
           ]
