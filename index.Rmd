@@ -1,0 +1,9 @@
+---
+title: "Webpage hosting LRB's CV"
+author: "Laurent Bergé"
+---
+
+
+The purpose of this page is only to host the CV of Laurent R. Bergé.
+
+The CV is [here](CV.pdf)

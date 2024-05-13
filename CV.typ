@@ -7,7 +7,7 @@
 /*
 Install the fontawesome fonts:
 - 1: download -- https://fontawesome.com/download
-- 2: got to the folder otfs and install the fonts
+- 2: go to the folder otfs and install the fonts
 - 3: use: #text(font: "Font Awesome 6 Free")[\u{f09b}]
 
 */
@@ -98,7 +98,7 @@ Install the fontawesome fonts:
     
     let add_pb = y_remaining < 2 * height_heading
     if y_remaining < 2 * height_heading {
-      [#hide[hiddent text necessary for page break] \ #pagebreak(weak: false)]
+      [#hide[hidden text necessary for page break] \ #pagebreak(weak: false)]
     }
     
     let header_fmt = [#x.body]
@@ -134,7 +134,7 @@ Install the fontawesome fonts:
     let y_remaining = height_total - here().position().y
     
     if y_remaining < 2.5cm {
-      [#hide[hiddent text necessary for page break] \ #pagebreak(weak: false)]
+      [#hide[hidden text necessary for page break] \ #pagebreak(weak: false)]
     }
     
   }
@@ -474,26 +474,29 @@ Install the fontawesome fonts:
 #let th = super[th]
 #let eme = super[ème]
 #let emes = super[èmes]
+#let sep = sym.parallel
 
 #date_table(
-  [2019: 3#rd Luxembourg Workshop on Innovation, Luxembourg #sym.parallel 12#th Annual Northwestern/USPTO Conference on Innovation Economics, Chicago, USA #sym.parallel University Paris Dauphine, Governance Analytics seminars, Paris, France],
+  [2019: 3#rd Luxembourg Workshop on Innovation, Luxembourg #sep 12#th Annual Northwestern/USPTO Conference on Innovation Economics, Chicago, USA #sep University Paris Dauphine, Governance Analytics seminars, Paris, France],
   [],
-  [2018: 2#nd Luxembourg Workshop on Innovation, Luxembourg #sym.parallel 13#th European Policy for Intellectual Property conference, Berlin, Germany #sym.parallel 4#th Geography of Innovation Conference, Barcelona, Spain],
+  [2018: 2#nd Luxembourg Workshop on Innovation, Luxembourg #sep 13#th European Policy for Intellectual Property conference, Berlin, Germany #sep 4#th Geography of Innovation Conference, Barcelona, Spain],
   [],
-  [2017: GREThA seminars, Bordeaux, France #sym.parallel BETA seminars, Strasbourg, France #sym.parallel 12#th European Policy for Intellectual Property conference, Bordeaux, France#sym.parallel 77#th Academy of Management conference, Atlanta, USA #sym.parallel 54#eme colloque de l'ASRDLF, Athens, Greece #sym.parallel 7#th ZEW/MaCCI Conference on the Economics of Innovation and Patenting, Mannheim, Germany #sym.parallel 1#st Luxembourg workshop on Innovation, Luxembourg #sym.parallel RSA annual conference, Dublin, Ireland],
-  [2016: 3#rd Geography of Innovation Conference, Toulouse #sym.parallel 33#emes journées de la microéconomie appliquée, Besançon #sym.parallel Journée R, Muséum National D'Histoire Naturelle, Paris #sym.parallel 56#th congress of the European Regional Science Association, Vienna, Austria #sym.parallel Barcelona workshop on regional an urban economics, Barcelona, Spain],
+  [2017: GREThA seminars, Bordeaux, France #sep BETA seminars, Strasbourg, France #sep 12#th European Policy for Intellectual Property conference, Bordeaux, France #sep 77#th Academy of Management conference, Atlanta, USA #sep 54#eme colloque de l'ASRDLF, Athens, Greece #sep 7#th ZEW/MaCCI Conference on the Economics of Innovation and Patenting, Mannheim, Germany #sep 1#st Luxembourg workshop on Innovation, Luxembourg #sep RSA annual conference, Dublin, Ireland],
+  [2016: 3#rd Geography of Innovation Conference, Toulouse #sep 33#emes journées de la microéconomie appliquée, Besançon #sep Journée R, Muséum National D'Histoire Naturelle, Paris #sep 56#th congress of the European Regional Science Association, Vienna, Austria #sep Barcelona workshop on regional an urban economics, Barcelona, Spain],
   [],
-  [2012--2015: NetWorkshop, Pécs, Hungary #sym.parallel 55#th congress of the European Regional Science Association, Lisbon, Portugal #sym.parallel Econ-Geo seminars, University of Utrecht, Utrecht, The Netherlands #sym.parallel 54#th congress of the European Regional Science Association, Saint-Petersburg, Russia (#sym.times 2 presentations) #sym.parallel 53#rd congress of the European Regional Science Association, Palermo, Italy #sym.parallel Economic Geography seminars, London School of Economics, London, England #sym.parallel 22#eme Séminaire Européen des Doctorants en Économie Régionale, Bordeaux],
+  [2012--2015: NetWorkshop, Pécs, Hungary #sep 55#th congress of the European Regional Science Association, Lisbon, Portugal #sep Econ-Geo seminars, University of Utrecht, Utrecht, The Netherlands #sep 54#th congress of the European Regional Science Association, Saint-Petersburg, Russia (#sym.times 2 presentations) #sep 53#rd congress of the European Regional Science Association, Palermo, Italy #sep Economic Geography seminars, London School of Economics, London, England #sep 22#eme Séminaire Européen des Doctorants en Économie Régionale, Bordeaux],
 )
 
 = Refereeing Activities
 
+#let nb(n) = [(#sym.times~#n)]
+
 #par(hanging-indent: 0.5em)[
   #box(width: 4em)[*Articles.*] 
-  Regional Studies (#sym.times~4), Industry and Innovation (#sym.times~4), Science and Public Policy (#sym.times~1), PLoS One (#sym.times~1), Scientometrics (#sym.times~4), Tijdschrift voor economische en sociale geografie (#sym.times~1), Journal of Economics & Management Strategy (#sym.times~1), Review of Industrial Organization (#sym.times~1).
+  Regional Studies #nb(4), Industry and Innovation #nb(4), Science and Public Policy #nb(1), PLoS One #nb(1), Scientometrics #nb(4), Tijdschrift voor economische en sociale geografie #nb(1), Journal of Economics & Management Strategy #nb(1), Review of Industrial Organization #nb(1), Journal of Statistical Software .
 
   #box(width: 4em)[*Grants.*]
-  Agence Nationale de la Recherche (#sym.times~1).
+  Agence Nationale de la Recherche #nb(1).
 ]
 = Academic Responsibilities
 
@@ -507,7 +510,7 @@ Install the fontawesome fonts:
 = Organization
 
 #date_table(
-  [2017--2019: Co-organizer of the 1#{super[st]}, 2#{super[nd]} and 3#{super[rd]} Luxembourg workshops on Innovation],
+  [2017--2019: Co-organizer of the 1#st, 2#nd and 3#rd Luxembourg workshops on Innovation],
   [2013--2014: Organizer of the first economics Ph.D. lunch seminars -- GREThA, University of Bordeaux],
 )
 
