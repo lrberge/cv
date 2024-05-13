@@ -383,9 +383,11 @@ Install the fontawesome fonts:
 = Publications in French
 
 #publi(title: "Le déploiement du très haut débit a-t-il favorisé la numérisation des entreprises? Une évaluation du Plan France Très Haut Débit.",
+       link: "https://www.cairn.info/revue-economique-2024-2-page-301.htm",
        authors: ("Chloé Duvivier", "Florian Léon"),
        venue: "La Revue Économique",
-       year: [_forthcoming_])
+       number: "75",
+       year: 2024)
 
 = Book Chapters
 
