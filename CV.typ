@@ -14,7 +14,7 @@ Install the fontawesome fonts:
 
 #let fa-github = text(font: "Font Awesome 6 Free")[\u{f09b}]
 #let fa-envelope = text(font: "Font Awesome 6 Free")[\u{f0e0}]
-#let fa-link = text(font: "Font Awesome 6 Free")[\u{f35d}]
+#let fa-link = text(font: "Font Awesome 6 Free")[\u{f08e}]
 
 #let the_month = datetime.today().display("[month repr:long] [year]")
 
@@ -109,19 +109,6 @@ Install the fontawesome fonts:
         #header_fmt#text(fill:white)[#box(width: 1fr)[#repeat[.]]]
       ]
     ]
-    
-    
-    // let heading-text = content_to_text(x.body)
-    // let inital = heading-text.at(0)
-    // let rest_text = heading-text.slice(1, heading-text.len())
-    
-    // block(stroke: (bottom: 0pt), width: 100%, inset: (bottom: 3pt))[
-    //   #set text(14pt)      
-    //   #place(dx: - 1em, dy: 0cm)[#text(20pt)[#inital]]
-    //   #underline(evade: true, offset: 5pt, stroke: (paint: black, thickness: 1.1pt))[
-    //     #rest_text#text(fill:white)[#box(width: 1fr)[#repeat[.]]]
-    //   ]
-    // ]
     
   }
   
