@@ -482,7 +482,7 @@ Install the fontawesome fonts:
 
 #par(hanging-indent: 0.5em)[
   #box(width: 4em)[*Articles.*] 
-  Regional Studies #nb(4), Industry and Innovation #nb(4), Science and Public Policy #nb(1), PLoS One #nb(1), Scientometrics #nb(4), Tijdschrift voor economische en sociale geografie #nb(1), Journal of Economics & Management Strategy #nb(1), Review of Industrial Organization #nb(1), Journal of Statistical Software .
+  Regional Studies #nb(4), Industry and Innovation #nb(4), Science and Public Policy #nb(1), PLoS One #nb(1), Scientometrics #nb(4), Tijdschrift voor economische en sociale geografie #nb(1), Journal of Economics & Management Strategy #nb(1), Review of Industrial Organization #nb(1), Journal of Statistical Software #nb(1).
 
   #box(width: 4em)[*Grants.*]
   Agence Nationale de la Recherche #nb(1).
